@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1877f2">
+  <title>Nenny Facebook Hub</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px 18px 32px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--tg-theme-bg-color, #f3f6fb);
+      color: var(--tg-theme-text-color, #172033);
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    header { text-align: center; margin: 8px 0 24px; }
+    .logo {
+      display: inline-grid; place-items: center; width: 58px; height: 58px;
+      border-radius: 18px; background: #1877f2; color: white;
+      font-size: 34px; font-weight: 800; margin-bottom: 10px;
+    }
+    h1 { margin: 0 0 6px; font-size: 25px; }
+    .sub { margin: 0; color: var(--tg-theme-hint-color, #667085); font-size: 14px; }
+    .account {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; padding: 16px; margin: 12px 0;
+      border-radius: 16px; background: var(--tg-theme-secondary-bg-color, #fff);
+      text-decoration: none; color: inherit; border: 1px solid rgba(120,130,150,.18);
+    }
+    .left { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      display: grid; place-items: center; width: 42px; height: 42px;
+      border-radius: 13px; background: #e8f1ff; color: #1877f2;
+      font-weight: 800;
+    }
+    .name { font-weight: 700; }
+    .hint { display: block; margin-top: 3px; font-size: 12px; color: var(--tg-theme-hint-color, #667085); }
+    .arrow { color: #1877f2; font-size: 22px; }
+    .note {
+      margin-top: 20px; padding: 14px; border-radius: 14px;
+      background: var(--tg-theme-secondary-bg-color, #fff);
+      color: var(--tg-theme-hint-color, #667085); font-size: 12px; line-height: 1.5;
+    }
+    footer { text-align: center; margin-top: 18px; font-size: 12px; color: var(--tg-theme-hint-color, #667085); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="logo">f</div>
+      <h1>Nenny Facebook Hub</h1>
+      <p class="sub">Choose an account shortcut</p>
+    </header>
+
+    <a class="account" href="https://m.facebook.com/" target="_self">
+      <span class="left"><span class="avatar">1</span><span><span class="name">Facebook 1</span><span class="hint">Open Facebook mobile</span></span></span><span class="arrow">›</span>
+    </a>
+    <a class="account" href="https://m.facebook.com/" target="_self">
+      <span class="left"><span class="avatar">2</span><span><span class="name">Facebook 2</span><span class="hint">Open Facebook mobile</span></span></span><span class="arrow">›</span>
+    </a>
+    <a class="account" href="https://m.facebook.com/" target="_self">
+      <span class="left"><span class="avatar">3</span><span><span class="name">Facebook 3</span><span class="hint">Open Facebook mobile</span></span></span><span class="arrow">›</span>
+    </a>
+    <a class="account" href="https://m.facebook.com/" target="_self">
+      <span class="left"><span class="avatar">4</span><span><span class="name">Facebook 4</span><span class="hint">Open Facebook mobile</span></span></span><span class="arrow">›</span>
+    </a>
+    <a class="account" href="https://m.facebook.com/" target="_self">
+      <span class="left"><span class="avatar">5</span><span><span class="name">Facebook 5</span><span class="hint">Open Facebook mobile</span></span></span><span class="arrow">›</span>
+    </a>
+
+    <div class="note">
+      <strong>Security & account sessions:</strong> These are five shortcuts to Facebook's official mobile website, not five separate Facebook logins. Your browser may reuse the same signed-in session. Use Facebook's own account switcher, or separate browser profiles where available, to keep accounts distinct. Never enter your Facebook password into a third-party bot or dashboard.
+    </div>
+    <footer>Unofficial shortcut dashboard · Facebook login is handled by Facebook</footer>
+  </main>
+  <script>
+    if (window.Telegram && window.Telegram.WebApp) {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    }
+  </script>
+</body>
+</html>
